@@ -1,2 +1,4 @@
 #!/bin/bash
-service apache2 stop
+if service --status-all | grep -Fq 'apache2'; then    
+  service apache2 stop
+fi
