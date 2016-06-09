@@ -4,10 +4,11 @@ files:
   - source: /index.html
     destination: /var/www/html/
 hooks:
-  BeforeInstall:
+  Install:
     - location: install_dependencies.sh
       timeout: 300
       runas: root
+  ApplicationStart:
     - location: start_server.sh
       timeout: 300
       runas: root
