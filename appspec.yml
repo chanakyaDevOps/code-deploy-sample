@@ -8,11 +8,11 @@ hooks:
     - location: install_dependencies.sh
       timeout: 300
       runas: root
-  ApplicationStart:
-    - location: start_server.sh
+ ApplicationStop:
+    - location: stop_server.sh
       timeout: 300
       runas: root
-  ApplicationStop:
-    - location: stop_server.sh
+ ApplicationStart:
+    - location: start_server.sh
       timeout: 300
       runas: root
